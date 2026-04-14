@@ -1,2 +1,6 @@
 # openseims
-An open-source, role-based platform designed to support ministries of education and partners in collecting, managing, visualising and using special education data for inclusive education planning.
+Open SEIMS (Special Education Information Management System) is an open-source, role-based platform designed to support ministries of education and implementing partners in collecting, managing, visualizing, and using special education data for inclusive education planning, monitoring, and reporting.
+
+The system provides a secure, structured foundation for maintaining learner records, tracking individualized education plans (IEPs), monitoring school-level inclusion capacity, and supporting coordination across schools, districts, and national education authorities. Built with interoperability in mind, Open SEIMS seamlessly integrates with existing national Education Management Information Systems (EMIS), eliminating data silos.
+
+Open SEIMS strengthens data quality and accessibility within special education systems, enabling education stakeholders to improve reporting, identify service gaps, and support evidence-informed planning while strictly adhering to local data privacy frameworks. The platform is highly configurable across different country contexts, with initial local implementations driving its continuous evolution as a globally scalable, reusable digital public good.
