@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+@import '../../tokens.css';
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*.blade.php';
+
+@config "./tailwind.config.js";
+
+@custom-variant dark (&:is(.dark *));
+
+@utility fi-header-heading {
+    & h1 {
+        color: #2a7473;
+    }
+}
+
+@utility fi-sidebar-nav {
+    /* grey sidebar */
+    @apply border-r border-t border-gray-200 shadow-none;
+    @apply bg-gray-50 dark:bg-gray-900;
+}
+
+@layer components {
+    .fi-main {
+        /* white content area */
+        @apply bg-white dark:bg-gray-950;
+    }
+
+    .fi-btn.fi-color.fi-color-primary:not(.fi-outlined):not(label) {
+        color: var(--color-white) !important;
+    }
+
+    .fi-btn.fi-color.fi-color-primary:not(.fi-outlined):not(label) > .fi-icon {
+        color: var(--color-white) !important;
+    }
+
+}
+
+@utility fi-layout {
+    @apply bg-white dark:bg-gray-950;
+}
+
+@utility invisible-section {
+    @apply bg-transparent! ring-0! ring-transparent! shadow-none!;
+
+    & > .fi-section-content-ctn > .fi-section-content {
+        @apply p-0!;
+    }
+}
+
+@utility fi-section-content-ctn {
+    .invisible-section > & > .fi-section-content {
+        @apply p-0!;
+    }
+}
+
+@utility fi-section-content {
+    .invisible-section > .fi-section-content-ctn > & {
+        @apply p-0!;
+    }
+}
+
+@layer components {
+    .seims-dashboard-page.fi-page {
+        gap: 0;
+    }
+
+    .seims-dashboard-page .fi-page-content {
+        padding: 0;
+    }
+}

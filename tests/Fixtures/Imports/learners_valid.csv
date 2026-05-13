@@ -1,0 +1,3 @@
+School ID,First Name,Middle Name,Last Name,Date of Birth,Sex,Enrollment Date,Status,Class,Parent Contact Name,Parent Contact Phone,Specific Needs,Primary Special Need Code,Primary Severity Level,Primary Status,Primary Disability Onset,Primary Diagnosis Date,Accommodation 1 Type Code,Accommodation 1 Status,Accommodation 1 Start Date,Accommodation 1 End Date,Accommodation 1 Notes
+1,Ama,K,Mensah,2014-01-10,F,2023-09-01,enrolled,P3,Parent Name,+233200000000,Requires additional learning support.,AUTISM,Severe,Confirmed,Congenital,2024-01-11,EXTRA_TIME,Approved,2024-02-01,2024-06-30,Term 2 accommodation
+1,Kwame,,Boateng,2013-06-20,M,2022-09-15,transferred,P4,Guardian Name,+233244000000,Requires assistive support.,AUTISM,Moderate,Provisional,Adventitious,2024-01-12,,,,,
