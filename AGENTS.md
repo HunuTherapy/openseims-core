@@ -53,6 +53,8 @@ DB_PASSWORD=openseims
 
 Default seeded login: `national.admin@example.com` / `Pass1234`.
 
+Local development with [Laravel Herd](https://herd.laravel.com) should use `http://seims.test` (`APP_URL` in `.env`). PHPUnit is configured the same way via `APP_URL=http://seims.test` in `phpunit.xml`.
+
 ### Lint and tests
 
 - **Tests:** `composer test` (PHPUnit; uses in-memory SQLite, no external DB)
