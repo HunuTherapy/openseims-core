@@ -242,8 +242,8 @@ This applies to `Learner`, `School`, and `SupervisionReport` models via dedicate
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/openseims.git
-cd openseims
+git clone https://github.com/HunuTherapy/openseims-core.git
+cd openseims-core
 ```
 
 #### 2. Install PHP Dependencies
@@ -292,7 +292,7 @@ SEIMS_ACTIVE_REPORTING_YEAR=2025
 #### 5. Create the Database and Run Migrations
 
 ```bash
-mysql -u root -e "CREATE DATABASE openseims CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql -u root -p -e "CREATE DATABASE openseims CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 php artisan migrate
 ```
 
