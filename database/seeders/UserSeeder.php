@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
-        $defaultPassword = '$2y$12$sypTJWu2Dv7y0D1M10n1ceXXp3NQa1MYugkppWQrDGCEc29nkab0G';
+        $defaultPassword = '$2y$12$/16fTrgOWf.Insl0oiqN3O0MYApWJjp6/uKzkohVxYLpYDbqjlRfi';
 
         $school = School::query()->first();
 

@@ -16,11 +16,9 @@ use Filament\Actions\Imports\Events\ImportStarted;
 use Filament\Actions\Imports\Models\Import;
 use Filament\Forms\Components\Select;
 use Filament\Notifications\Notification;
-use Filament\Support\Facades\FilamentView;
 use Filament\Support\View\Components\ModalComponent;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
-use Filament\View\PanelsRenderHook;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Database\Eloquent\Model;
@@ -35,10 +33,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        FilamentView::registerRenderHook(
-            PanelsRenderHook::BODY_END,
-            static fn () => view('filament.pollers.import-failure-toast-poller'),
-        );
+        //
     }
 
     /**
