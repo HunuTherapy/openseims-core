@@ -554,7 +554,7 @@ openseims/
 │   │   └── Reporting/          # ActiveReportingYear service
 │   └── Support/
 │       ├── AuditLogger.php     # Manual audit logging helper
-│       ├── GeographyData.php   # Ghana regions/districts seed data
+│       ├── GeographyData.php   # generic regions/districts seed data
 │       ├── OfficerProvisioning.php # Creates officer + user account atomically
 │       └── TeacherUserAccountManager.php # Creates teacher login for coordinators
 ├── database/
@@ -715,7 +715,7 @@ The current API version is configured in `config/scramble.php`:
 - CSV import support for Learners, Teachers, Officers, Schools, Attendance, IEP Goals
 - REST API with Sanctum authentication and auto-generated OpenAPI documentation
 - KoboToolbox webhook integration
-- Seeded reference data for Ghana (16 regions, 260+ districts)
+- Seeded generic reference data (16 regions, 192 districts)
 
 **Technology baseline:**
 - Laravel 12, PHP 8.3, Filament 5, Livewire 4, Tailwind CSS 4

@@ -310,24 +310,10 @@ class LearnerResource extends Resource
                         ->tel()
                         ->rule('regex:/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/')
                         ->validationMessages([
-                            'regex' => 'Enter a valid phone number (e.g., +233 24 123 4567).',
+                            'regex' => 'Enter a valid phone number (e.g., +1 555 123 4567).',
                         ])
                         ->maxLength(100)
                         ->required(),
-
-                    // TextInput::make('secondary_contact_phone')
-                    //     ->label('Parent/Guardian Secondary Phone')
-                    //     ->tel()
-                    //     ->telRegex('/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/')
-                    //     ->validationMessages([
-                    //         'regex' => 'Enter a valid phone number (e.g., +233 20 987 6543).',
-                    //     ])
-                    //     ->maxLength(100),
-
-                    // TextInput::make('primary_contact_email')
-                    //     ->label('Parent/Guardian email')
-                    //     ->email()
-                    //     ->maxLength(100),
 
                     TextInput::make('specific_needs')
                         ->label('Specific Needs')

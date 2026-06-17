@@ -33,7 +33,7 @@ class SchoolImporter extends Importer
                 ->requiredMapping()
                 ->rules(['required', 'max:255'])
                 ->exampleHeader('Name')
-                ->example('Abeka Basic School'),
+                ->example('Example Primary School'),
 
             ImportColumn::make('district_id')
                 ->label('District ID')

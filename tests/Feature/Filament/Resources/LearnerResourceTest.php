@@ -38,13 +38,13 @@ class LearnerResourceTest extends SeimsResourceTestCase
         $school = School::factory()->create();
 
         $data = [
-            'first_name' => 'Ama',
+            'first_name' => 'Emma',
             'middle_name' => 'K',
-            'last_name' => 'Mensah',
+            'last_name' => 'Smith',
             'date_of_birth' => '2014-01-10',
             'sex' => 'F',
             'primary_contact_name' => 'Parent Name',
-            'primary_contact_phone' => '+233200000000',
+            'primary_contact_phone' => '+10000000001',
             'primary_contact_email' => 'parent@example.com',
             'specific_needs' => 'Requires additional learning support.',
             'school_id' => $school->id,
@@ -61,8 +61,8 @@ class LearnerResourceTest extends SeimsResourceTestCase
             ->assertRedirect(LearnerResource::getUrl('index'));
 
         $this->assertDatabaseHas(Learner::class, [
-            'first_name' => 'Ama',
-            'last_name' => 'Mensah',
+            'first_name' => 'Emma',
+            'last_name' => 'Smith',
             'school_id' => $school->id,
         ]);
     }
@@ -107,18 +107,18 @@ class LearnerResourceTest extends SeimsResourceTestCase
 
         Livewire::test(EditLearner::class, ['record' => $learner->id])
             ->fillForm([
-                'first_name' => 'Kwame',
-                'last_name' => 'Boateng',
+                'first_name' => 'James',
+                'last_name' => 'Johnson',
                 'status' => 'transferred',
-                'primary_contact_phone' => '+233200000000',
+                'primary_contact_phone' => '+10000000001',
             ])
             ->call('save')
             ->assertHasNoFormErrors();
 
         $this->assertDatabaseHas(Learner::class, [
             'id' => $learner->id,
-            'first_name' => 'Kwame',
-            'last_name' => 'Boateng',
+            'first_name' => 'James',
+            'last_name' => 'Johnson',
             'status' => 'transferred',
         ]);
     }
@@ -129,8 +129,8 @@ class LearnerResourceTest extends SeimsResourceTestCase
 
         Livewire::test(CreateLearner::class)
             ->fillForm([
-                'first_name' => 'Ama',
-                'last_name' => 'Mensah',
+                'first_name' => 'Emma',
+                'last_name' => 'Smith',
                 'date_of_birth' => '2014-01-10',
                 'sex' => 'F',
                 'primary_contact_name' => 'Parent Name',

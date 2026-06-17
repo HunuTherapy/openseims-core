@@ -34,20 +34,20 @@ class IepGoalImporterTest extends TestCase
 
         $this->user = User::factory()->create();
         $this->school = School::factory()->create([
-            'name' => 'Abeka Basic School',
-            'emis_code' => 'GH110001',
+            'name' => 'Example Primary School',
+            'emis_code' => '10000001',
         ]);
         $this->learner = Learner::factory()->create([
-            'first_name' => 'Kwame',
+            'first_name' => 'James',
             'middle_name' => null,
-            'last_name' => 'Boateng',
+            'last_name' => 'Johnson',
             'school_id' => $this->school->id,
         ]);
 
         Learner::factory()->create([
-            'first_name' => 'Yaw',
+            'first_name' => 'David',
             'middle_name' => 'Evan',
-            'last_name' => 'Lamptey',
+            'last_name' => 'Taylor',
             'school_id' => $this->school->id,
         ]);
     }

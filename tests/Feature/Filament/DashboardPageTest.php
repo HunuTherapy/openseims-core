@@ -44,10 +44,10 @@ class DashboardPageTest extends SeimsResourceTestCase
 
     private function seedDashboardData(): void
     {
-        $greaterAccraDistrict = District::query()->whereHas('region', fn ($query) => $query->where('name', 'Greater Accra'))->firstOrFail();
+        $district = District::query()->whereHas('region', fn ($query) => $query->where('name', 'Region 01'))->firstOrFail();
 
         $school = School::factory()->create([
-            'district_id' => $greaterAccraDistrict->id,
+            'district_id' => $district->id,
         ]);
 
         $coordinator = Officer::factory()->create([
@@ -55,8 +55,8 @@ class DashboardPageTest extends SeimsResourceTestCase
             'is_deployed' => true,
         ]);
         $coordinator->user->update([
-            'region_id' => $greaterAccraDistrict->region_id,
-            'district_id' => $greaterAccraDistrict->id,
+            'region_id' => $district->region_id,
+            'district_id' => $district->id,
         ]);
         $coordinator->schools()->attach($school);
 

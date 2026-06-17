@@ -10,9 +10,9 @@ class AssessmentCenterSeeder extends Seeder
     public function run(): void
     {
         $centers = [
-            ['code' => 'AC-001', 'name' => 'Central Assessment Center', 'address' => 'Accra', 'phone' => '+233200000001', 'email' => 'central@example.com'],
-            ['code' => 'AC-002', 'name' => 'Northern Assessment Center', 'address' => 'Tamale', 'phone' => '+233200000002', 'email' => 'northern@example.com'],
-            ['code' => 'AC-003', 'name' => 'Coastal Assessment Center', 'address' => 'Cape Coast', 'phone' => '+233200000003', 'email' => 'coastal@example.com'],
+            ['code' => 'AC-001', 'name' => 'Central Assessment Center', 'address' => 'District 01-01', 'phone' => '+10000000001', 'email' => 'central@example.com'],
+            ['code' => 'AC-002', 'name' => 'Regional Assessment Center', 'address' => 'District 02-01', 'phone' => '+10000000002', 'email' => 'regional@example.com'],
+            ['code' => 'AC-003', 'name' => 'Community Assessment Center', 'address' => 'District 03-01', 'phone' => '+10000000003', 'email' => 'community@example.com'],
         ];
 
         foreach ($centers as $center) {

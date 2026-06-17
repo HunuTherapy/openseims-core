@@ -64,9 +64,9 @@ class OfficerResource extends Resource
 
                 TextInput::make('phone')
                     ->rule('regex:/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/')
-                    ->helperText('Use digits, spaces, +, or hyphens. Example: +233 24 123 4567.')
+                    ->helperText('Use digits, spaces, +, or hyphens. Example: +1 555 123 4567.')
                     ->validationMessages([
-                        'regex' => 'Enter a valid phone number (e.g., +233 24 123 4567).',
+                        'regex' => 'Enter a valid phone number (e.g., +1 555 123 4567).',
                     ])
                     ->formatStateUsing(fn (?string $state, ?Officer $record): string => static::maskContactValue($state, $record))
                     ->rule(fn (?Officer $record) => Rule::unique('officers', 'phone')->ignore($record?->getKey()))

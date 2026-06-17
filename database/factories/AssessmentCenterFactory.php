@@ -16,7 +16,7 @@ class AssessmentCenterFactory extends Factory
             'name' => $this->faker->company(),
             'code' => strtoupper($this->faker->bothify('AC-###')),
             'address' => $this->faker->streetAddress(),
-            'phone' => '+233'.$this->faker->numerify('2#########'),
+            'phone' => '+1'.$this->faker->numerify('##########'),
             'email' => $this->faker->safeEmail(),
         ];
     }

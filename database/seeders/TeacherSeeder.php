@@ -16,19 +16,17 @@ class TeacherSeeder extends Seeder
         $faker = Faker::create();
 
         $firstNames = [
-            'Kojo', 'Adjoa', 'Afriyie', 'Yaw', 'Serwaa', 'Baffour',
-            'Komla', 'Edem', 'Akofa', 'Sena',
-            'Ashong', 'Adjorkor', 'Tettey', 'Naa',
-            'Habiba', 'Issifu', 'Sulemana', 'Shakur', 'Zuleika',
-            'Emmanuel', 'Dorcas', 'Nathaniel', 'Cynthia', 'Gideon', 'Matilda',
+            'James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer',
+            'Michael', 'Linda', 'William', 'Elizabeth', 'David', 'Barbara',
+            'Richard', 'Susan', 'Joseph', 'Jessica', 'Thomas', 'Sarah',
+            'Charles', 'Karen', 'Daniel', 'Nancy', 'Matthew', 'Lisa',
         ];
 
         $lastNames = [
-            'Kusi', 'Darko', 'Twum', 'Ofori', 'Bonsu', 'Agyemang',
-            'Kpeglo', 'Soglo', 'Ahiable', 'Agbodza',
-            'Quartey', 'Adjaye', 'Addy',
-            'Issahaku', 'Bukari', 'Fuseini', 'Abudu', 'Hamidu',
-            'Yeboah', 'Annan', 'Kwakye', 'Owuraku',
+            'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia',
+            'Miller', 'Davis', 'Rodriguez', 'Martinez', 'Hernandez', 'Lopez',
+            'Gonzalez', 'Wilson', 'Anderson', 'Thomas', 'Taylor', 'Moore',
+            'Jackson', 'Martin', 'Lee', 'Perez',
         ];
 
         $schools = School::all();

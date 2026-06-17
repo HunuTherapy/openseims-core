@@ -44,7 +44,7 @@ class LearnerImporter extends Importer
                 ->requiredMapping()
                 ->rules(['required', 'max:255'])
                 ->exampleHeader('First Name')
-                ->examples(['Ama', 'Kwame', 'Kofi', 'Akosua', 'Yaw']),
+                ->examples(['John', 'Mary', 'James', 'Sarah', 'David']),
 
             ImportColumn::make('middle_name')
                 ->label('Middle Name')
@@ -57,7 +57,7 @@ class LearnerImporter extends Importer
                 ->requiredMapping()
                 ->rules(['required', 'max:255'])
                 ->exampleHeader('Last Name')
-                ->examples(['Mensah', 'Boateng', 'Asare', 'Owusu', 'Lamptey']),
+                ->examples(['Smith', 'Johnson', 'Brown', 'Williams', 'Taylor']),
 
             ImportColumn::make('date_of_birth')
                 ->label('Date of Birth')
@@ -107,7 +107,7 @@ class LearnerImporter extends Importer
                 ->label('Parent Contact Phone')
                 ->rules(['nullable', 'max:100'])
                 ->exampleHeader('Parent Contact Phone')
-                ->examples(['+233200000000', '+233244000000', '+233201234567', '+233209876543', '+233208765432']),
+                ->examples(['+10000000001', '+10000000002', '+10000000003', '+10000000004', '+10000000005']),
 
             ImportColumn::make('specific_needs')
                 ->label('Specific Needs')

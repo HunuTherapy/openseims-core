@@ -38,8 +38,8 @@ class AttendanceRecordImporterTest extends TestCase
 
         $this->user = User::factory()->create();
         $this->school = School::factory()->create([
-            'name' => 'Abeka Basic School',
-            'emis_code' => 'GH110001',
+            'name' => 'Example Primary School',
+            'emis_code' => '10000001',
         ]);
 
         $this->teacher = Teacher::factory()->create([
@@ -50,17 +50,17 @@ class AttendanceRecordImporterTest extends TestCase
         ]);
 
         $this->primaryLearner = Learner::factory()->create([
-            'first_name' => 'Ama',
+            'first_name' => 'Emma',
             'middle_name' => null,
-            'last_name' => 'Mensah',
+            'last_name' => 'Smith',
             'school_id' => $this->school->id,
             'class' => 'P1',
         ]);
 
         $this->secondaryLearner = Learner::factory()->create([
-            'first_name' => 'Kofi',
+            'first_name' => 'Michael',
             'middle_name' => null,
-            'last_name' => 'Asare',
+            'last_name' => 'Brown',
             'school_id' => $this->school->id,
             'class' => 'JHS1',
         ]);

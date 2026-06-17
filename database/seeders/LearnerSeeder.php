@@ -15,13 +15,13 @@ class LearnerSeeder extends Seeder
         $faker = Faker::create();
 
         $firstNames = [
-            'Kwame', 'Ama', 'Yaw', 'Abena', 'Selorm', 'Delali', 'Mawuli', 'Eyram', 'Nii', 'Naa', 'Tetteh', 'Mohammed',
-            'Aisha', 'Sadat', 'Issahaku', 'Alhassan', 'Rita', 'Priscilla', 'Samuel', 'Joseph', 'Comfort', 'Naana',
+            'James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer', 'Michael', 'Linda', 'William', 'Elizabeth',
+            'David', 'Barbara', 'Richard', 'Susan', 'Joseph', 'Jessica', 'Thomas', 'Sarah', 'Charles', 'Karen',
         ];
 
         $lastNames = [
-            'Mensah', 'Owusu', 'Osei', 'Addo', 'Agbeko', 'Dzakpasu', 'Dzifa', 'Lamptey', 'Lartey', 'Tetteh',
-            'Yakubu', 'Ibrahim', 'Mahama', 'Alhassan', 'Asamoah', 'Tagoe', 'Boateng', 'Ampofo',
+            'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Wilson', 'Anderson',
+            'Taylor', 'Moore', 'Thomas', 'Jackson', 'White', 'Harris', 'Martin', 'Clark',
         ];
 
         $statuses = ['enrolled', 'transferred', 'exited'];
@@ -42,8 +42,8 @@ class LearnerSeeder extends Seeder
                     'sex' => $sex,
                     'date_of_birth' => $faker->dateTimeBetween('-12 years', '-5 years'),
                     'enrol_date' => $faker->dateTimeBetween('-5 years', 'now'),
-                    'class' => $faker->randomElement(LearnerClass::class),    // KG-JHS3
-                    'primary_language' => $faker->randomElement(['Akan', 'Ewe', 'Ga', 'English']),
+                    'class' => $faker->randomElement(LearnerClass::class),
+                    'primary_language' => 'English',
                     'primary_contact_name' => $faker->name,
                     'status' => $faker->randomElement($statuses),
                     'academic_strengths' => $faker->sentence(),

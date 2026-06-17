@@ -13,19 +13,18 @@ use Illuminate\Support\Str;
 class OfficerSeeder extends Seeder
 {
     protected array $firstNames = [
-        'Abena', 'Abigail', 'Adwoa', 'Akosua', 'Ama', 'Belinda', 'Doreen', 'Efua',
-        'Elsie', 'Esi', 'Esther', 'Eunice', 'Felicia', 'Gladys', 'Grace', 'Joana',
-        'Linda', 'Mabel', 'Mavis', 'Mercy', 'Naana', 'Patricia', 'Priscilla', 'Regina',
-        'Rita', 'Rosemond', 'Victoria', 'Yaa', 'Yaw', 'Kofi', 'Kwabena', 'Kwame',
-        'Daniel', 'David', 'Emmanuel', 'Eric', 'Francis', 'Gideon', 'Isaac', 'Joseph',
-        'Kelvin', 'Kennedy', 'Michael', 'Peter', 'Richard', 'Samuel', 'Solomon', 'Theophilus',
+        'James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer', 'Michael', 'Linda',
+        'William', 'Elizabeth', 'David', 'Barbara', 'Richard', 'Susan', 'Joseph', 'Jessica',
+        'Thomas', 'Sarah', 'Charles', 'Karen', 'Daniel', 'Nancy', 'Matthew', 'Lisa',
+        'Anthony', 'Betty', 'Mark', 'Sandra', 'Donald', 'Ashley', 'Steven', 'Kimberly',
+        'Paul', 'Emily', 'Andrew', 'Donna', 'Joshua', 'Michelle', 'Kenneth', 'Dorothy',
     ];
 
     protected array $lastNames = [
-        'Addo', 'Adu', 'Agyei', 'Agyemang', 'Ampofo', 'Andoh', 'Appiah', 'Asante',
-        'Asiedu', 'Asmah', 'Attoh', 'Badu', 'Baah', 'Boateng', 'Cobbinah', 'Davis',
-        'Frimpong', 'Gyasi', 'Issah', 'Koomson', 'Kusi', 'Mensah', 'Mintah', 'Nyarko',
-        'Ofori', 'Okai', 'Oppong', 'Owusu', 'Quaye', 'Sarpong', 'Tetteh', 'Yeboah',
+        'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis',
+        'Rodriguez', 'Martinez', 'Hernandez', 'Lopez', 'Gonzalez', 'Wilson', 'Anderson',
+        'Thomas', 'Taylor', 'Moore', 'Jackson', 'Martin', 'Lee', 'Perez', 'Thompson',
+        'White', 'Harris', 'Sanchez', 'Clark', 'Ramirez', 'Lewis', 'Robinson', 'Walker',
     ];
 
     public function run(): void
@@ -80,7 +79,7 @@ class OfficerSeeder extends Seeder
 
     protected function generatePhoneNumberPrefix(): string
     {
-        $prefix = Arr::random(['020', '023', '024', '025', '026', '027', '028', '053', '054', '055', '057', '059']);
+        $prefix = Arr::random(['201', '202', '203', '204', '205', '206', '207', '208', '209']);
 
         return $prefix.(string) random_int(1000000, 9999999);
     }

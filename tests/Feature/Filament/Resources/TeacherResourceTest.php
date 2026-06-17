@@ -100,8 +100,8 @@ class TeacherResourceTest extends SeimsResourceTestCase
                 'teacher_no' => 'TCH-2001',
                 'teacher_type' => 'school_coordinator',
                 'school_id' => $school->id,
-                'first_name' => 'Akua',
-                'last_name' => 'Mensah',
+                'first_name' => 'Mary',
+                'last_name' => 'Smith',
                 'class' => 'P1',
             ])
             ->fillForm([

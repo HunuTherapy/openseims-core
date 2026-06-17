@@ -15,7 +15,7 @@ enum UnitOfMeasure: string implements HasLabel
     case INDEX = 'index';           // composite indicators
     case DAYS = 'days';             // durations
     case HOURS = 'hours';
-    case CURRENCY = 'GH₵';            // Ghanaian cedi example
+    case CURRENCY = 'USD';          // currency example
     case BOOLEAN = 'yes/no';        // coverage indicators expressed as Yes/No
 
     /**

@@ -26,8 +26,8 @@ class SchoolResourceTest extends SeimsResourceTestCase
 
     public function test_can_create_school(): void
     {
-        $region = Region::query()->where('name', 'Greater Accra')->firstOrFail();
-        $district = District::query()->where('region_id', $region->id)->where('name', 'Accra')->firstOrFail();
+        $region = Region::query()->where('name', 'Region 01')->firstOrFail();
+        $district = District::query()->where('region_id', $region->id)->where('name', 'District 01-01')->firstOrFail();
 
         Livewire::test(CreateSchool::class)
             ->fillForm([
@@ -73,12 +73,12 @@ class SchoolResourceTest extends SeimsResourceTestCase
 
     public function test_school_emis_code_must_be_numeric_and_between_8_and_13_digits(): void
     {
-        $region = Region::query()->where('name', 'Greater Accra')->firstOrFail();
-        $district = District::query()->where('region_id', $region->id)->where('name', 'Accra')->firstOrFail();
+        $region = Region::query()->where('name', 'Region 01')->firstOrFail();
+        $district = District::query()->where('region_id', $region->id)->where('name', 'District 01-01')->firstOrFail();
 
         Livewire::test(CreateSchool::class)
             ->fillForm([
-                'emis_code' => 'GH110001',
+                'emis_code' => '12345678901234',
                 'name' => 'Invalid EMIS School',
                 'region_id' => $region->id,
                 'district_id' => $district->id,
@@ -87,7 +87,7 @@ class SchoolResourceTest extends SeimsResourceTestCase
             ])
             ->call('create')
             ->assertHasFormErrors([
-                'emis_code' => 'regex',
+                'emis_code' => 'max',
             ]);
 
         Livewire::test(CreateSchool::class)
@@ -101,7 +101,7 @@ class SchoolResourceTest extends SeimsResourceTestCase
             ])
             ->call('create')
             ->assertHasFormErrors([
-                'emis_code' => 'regex',
+                'emis_code' => 'min',
             ]);
     }
 

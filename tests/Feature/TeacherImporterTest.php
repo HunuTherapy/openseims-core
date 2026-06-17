@@ -34,18 +34,18 @@ class TeacherImporterTest extends TestCase
         $this->seed(RegionDistrictSeeder::class);
 
         $this->user = User::factory()->create();
-        $greaterAccraDistrict = District::query()->whereHas('region', fn ($query) => $query->where('name', 'Greater Accra'))->firstOrFail();
-        $bonoDistrict = District::query()->whereHas('region', fn ($query) => $query->where('name', 'Bono'))->firstOrFail();
+        $primaryDistrict = District::query()->whereHas('region', fn ($query) => $query->where('name', 'Region 01'))->firstOrFail();
+        $secondaryDistrict = District::query()->whereHas('region', fn ($query) => $query->where('name', 'Region 02'))->firstOrFail();
         $this->primarySchool = School::factory()->create([
-            'name' => 'Abeka Basic School',
-            'emis_code' => 'GH110001',
-            'district_id' => $greaterAccraDistrict->id,
+            'name' => 'Example Primary School',
+            'emis_code' => '10000001',
+            'district_id' => $primaryDistrict->id,
         ]);
 
         $this->secondarySchool = School::factory()->create([
-            'name' => 'Techiman Basic School',
-            'emis_code' => 'GH208012',
-            'district_id' => $bonoDistrict->id,
+            'name' => 'Example Secondary School',
+            'emis_code' => '10000002',
+            'district_id' => $secondaryDistrict->id,
         ]);
 
         $this->linkedUser = User::factory()->create([

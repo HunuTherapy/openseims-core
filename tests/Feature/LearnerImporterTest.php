@@ -35,8 +35,8 @@ class LearnerImporterTest extends TestCase
 
         $this->user = User::factory()->create();
         $this->school = School::factory()->create([
-            'name' => 'Abeka Basic School',
-            'emis_code' => 'GH110001',
+            'name' => 'Example Primary School',
+            'emis_code' => '10000001',
         ]);
 
         $this->seed(ConditionCategorySeeder::class);
@@ -76,9 +76,9 @@ class LearnerImporterTest extends TestCase
     public function test_import_allows_duplicate_learner_rows_and_existing_database_matches(): void
     {
         Learner::factory()->create([
-            'first_name' => 'Ama',
-            'middle_name' => 'Kojo',
-            'last_name' => 'Mensah',
+            'first_name' => 'Emma',
+            'middle_name' => 'John',
+            'last_name' => 'Smith',
             'date_of_birth' => '2016-05-10',
             'school_id' => $this->school->id,
         ]);
